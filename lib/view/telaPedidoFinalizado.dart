@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tcc3ds/view/telaFecharPedido.dart';
 import 'package:tcc3ds/view/telaHome.dart';
 
 class PedidoFinalizado extends StatelessWidget {
@@ -22,8 +21,6 @@ class FinalizadoPedido extends StatefulWidget {
 }
 
 class _FinalizadoPedidoState extends State<FinalizadoPedido> {
-  
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,8 +30,6 @@ class _FinalizadoPedidoState extends State<FinalizadoPedido> {
       ),
     );
   }
-
-
 }
 
 _body(BuildContext context) {
@@ -53,7 +48,7 @@ _body(BuildContext context) {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           AnimatedOpacity(
-            opacity: (!animLogo)? 0 : 1,
+            opacity: (!animLogo) ? 0 : 1,
             duration: Duration(seconds: 2),
             child: Image.asset(
               'assets/pedidoImagem.png',
