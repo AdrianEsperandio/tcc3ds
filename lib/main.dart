@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -81,69 +80,71 @@ _body(BuildContext context) {
   return Container(
     decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-                'assets/MenuScreenSolidWall2.jpg'),
+            image: AssetImage('assets/MenuScreenSolidWall2.jpg'),
             fit: BoxFit.cover)),
     child: BackdropFilter(
       filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
       child: Center(
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
-            child: Column(
-              children: [
-                SizedBox(height: 70),
-                AnimatedContainer(
-                  padding: const EdgeInsets.only(top: 60),
-                  duration: Duration(
-                    milliseconds: 990,
-                  ),
-                  height: (!animLogo)? 0 : 340,
-                  child: Image.asset(
-                    'assets/logo.png',
-                  ),
-                  curve: Curves.decelerate,
+        child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: Column(
+            children: [
+              SizedBox(height: 70),
+              AnimatedContainer(
+                padding: const EdgeInsets.only(top: 60),
+                duration: Duration(
+                  milliseconds: 990,
                 ),
-                SizedBox(height: 50),
-                AnimatedOpacity(
-                  duration: Duration(milliseconds: 2700),
-                  opacity: (!animLogo)? 0 : 1,
-                  child: SizedBox(
-                    width: 260,
-                    child: Text(
-                      "\"Livros não mudam o mundo. Livros mudam pessoas. Pessoas mudam o mundo.\"",
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
-                      ),
+                height: (!animLogo) ? 0 : 340,
+                child: Image.asset(
+                  'assets/logo.png',
+                ),
+                curve: Curves.decelerate,
+              ),
+              SizedBox(height: 50),
+              AnimatedOpacity(
+                duration: Duration(milliseconds: 2700),
+                opacity: (!animLogo) ? 0 : 1,
+                child: SizedBox(
+                  width: 260,
+                  child: Text(
+                    "\"Livros não mudam o mundo. Livros mudam pessoas. Pessoas mudam o mundo.\"",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16),
                   ),
-                  ),
-                  SizedBox(height: 10),
-                  AnimatedOpacity(
-                  duration: Duration(milliseconds: 3500),
-                  opacity: (!animLogo)? 0 : 1,
-                  child: SizedBox(
-                    width: 260,
-                    child: Column(
-                      children: [
-                        Align(
-                          alignment: Alignment.centerRight,
-                          child: Text(
+                ),
+              ),
+              SizedBox(height: 10),
+              AnimatedOpacity(
+                duration: Duration(milliseconds: 3500),
+                opacity: (!animLogo) ? 0 : 1,
+                child: SizedBox(
+                  width: 260,
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
                           "MÁRIO QUINTANA",
-                          style: TextStyle(color: Colors.white,
-                           fontWeight: FontWeight.bold,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
                             fontSize: 16,
-                            ),
                           ),
-
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  ),
-               // textoConectando(),
-               // carregamentoFake(),
-              ],
-            ),
-          ),      
+                ),
+              ),
+              // textoConectando(),
+              // carregamentoFake(),
+            ],
+          ),
+        ),
       ),
     ),
   );
